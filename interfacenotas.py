@@ -18,15 +18,6 @@ onehotencoder = joblib.load('onehotencoder.pkl')
 standard_scaler = joblib.load('standard_scaler.pkl')
 best_bagging_linear_regressor_model = joblib.load('best_bagging_linear_regressor_model.pkl')
 
-"""## Create the user interface
-
-### Subtask:
-Design the input fields in the Streamlit app for the user to enter values for 'Felder' and 'Examen_admisión_Universidad'.
-
-**Reasoning**:
-Design the input fields in the Streamlit app for the user to enter values for 'Felder' and 'Examen_admisión_Universidad'.
-"""
-
 # Get categories from the onehotencoder
 felder_categories = onehotencoder.categories_[0]
 
@@ -36,16 +27,6 @@ examen_input = st.number_input('Enter Examen de admisión score:', min_value=0.0
 
 """## Process user input
 
-### Subtask:
-Get the user's input from the UI.
-
-## Preprocess the input data
-
-### Subtask:
-Apply the loaded `standard_scaler` and `onehotencoder` to the user's input to prepare it for the model.
-
-**Reasoning**:
-Create a DataFrame from user inputs, scale the exam score, one-hot encode the Felder category, and concatenate them into a single preprocessed DataFrame.
 """
 
 # Create a DataFrame from user inputs
