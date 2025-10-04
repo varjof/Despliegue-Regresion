@@ -80,7 +80,7 @@ felder_encoded_df = pd.DataFrame(felder_encoded, columns=feature_names, index=us
 examen_scaled_df = pd.DataFrame(examen_scaled, columns=['Examen_admisión_Universidad'], index=user_input_df.index)
 preprocessed_input = pd.concat([examen_scaled_df, felder_encoded_df], axis=1)
 
-display(preprocessed_input)
+#display(preprocessed_input)
 
 """## Make predictions
 
