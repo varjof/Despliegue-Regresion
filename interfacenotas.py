@@ -49,7 +49,7 @@ examen_scaled_df = pd.DataFrame(examen_scaled, columns=['Examen_admisión_Univer
 preprocessed_input = pd.concat([examen_scaled_df, felder_encoded_df], axis=1)
 
 #display(preprocessed_input)
-
+prediction = best_bagging_linear_regressor_model.predict(preprocessed_input)
 st.write('Predicted Course Approval Score:', prediction[0])
 st.write("""
 This application predicts the likelihood of course approval based on your Felder learning style and university entrance exam score.
