@@ -14,15 +14,6 @@ import numpy as np
 
 st.title('Course Approval Prediction')
 
-"""## Load the saved objects
-
-### Subtask:
-Load the `onehotencoder`, `standard_scaler`, and `best_bagging_linear_regressor_model` using `joblib`.
-
-**Reasoning**:
-Load the onehotencoder, standard_scaler, and the regression model using joblib.
-"""
-
 onehotencoder = joblib.load('onehotencoder.pkl')
 standard_scaler = joblib.load('standard_scaler.pkl')
 best_bagging_linear_regressor_model = joblib.load('best_bagging_linear_regressor_model.pkl')
