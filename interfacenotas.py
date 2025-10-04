@@ -25,10 +25,6 @@ felder_categories = onehotencoder.categories_[0]
 felder_input = st.selectbox('Select Felder category:', felder_categories)
 examen_input = st.number_input('Enter Examen de admisión score:', min_value=0.0, max_value=10.0, value=5.0, step=0.01)
 
-"""## Process user input
-
-"""
-
 # Create a DataFrame from user inputs
 user_input_df = pd.DataFrame({'Felder': [felder_input], 'Examen_admisión_Universidad': [examen_input]})
 
@@ -54,37 +50,7 @@ preprocessed_input = pd.concat([examen_scaled_df, felder_encoded_df], axis=1)
 
 #display(preprocessed_input)
 
-"""## Make predictions
-
-### Subtask:
-Use the loaded `best_bagging_linear_regressor_model` to make a prediction based on the preprocessed input.
-
-**Reasoning**:
-Make a prediction using the loaded model and the preprocessed input.
-"""
-
-prediction = best_bagging_linear_regressor_model.predict(preprocessed_input)
-
-"""## Display the prediction
-
-### Subtask:
-Show the prediction result to the user in the Streamlit app.
-
-**Reasoning**:
-Display the prediction result in the Streamlit app using st.write with a descriptive label.
-"""
-
 st.write('Predicted Course Approval Score:', prediction[0])
-
-"""## Add instructions and information
-
-### Subtask:
-Include necessary instructions and explanations in the Streamlit app for the user.
-
-**Reasoning**:
-Add introductory text and instructions to the Streamlit app to guide the user.
-"""
-
 st.write("""
 This application predicts the likelihood of course approval based on your Felder learning style and university entrance exam score.
 
