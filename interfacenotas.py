@@ -61,21 +61,3 @@ This application predicts the likelihood of course approval based on your Felder
 
 The predicted score is a numerical value indicating the estimated approval score. Higher values generally suggest a higher likelihood of course approval.
 """)
-
-"""## Summary:
-
-### Data Analysis Key Findings
-
-*   The Streamlit application successfully loads the necessary `onehotencoder`, `standard_scaler`, and `best_bagging_linear_regressor_model` using `joblib`.
-*   User input for 'Felder' and 'Examen\_admisión\_Universidad' is captured through a selectbox and a number input field, respectively.
-*   The user input is preprocessed by scaling the 'Examen\_admisión\_Universidad' and one-hot encoding the 'Felder' category.
-*   The preprocessed input is used by the loaded model to generate a prediction for the course approval score.
-*   The final prediction is displayed to the user in the Streamlit app.
-*   Instructions and information on how to use the application and interpret the results are included.
-
-### Insights or Next Steps
-
-*   Consider adding input validation to ensure the user provides values within expected ranges, even though the number input has min/max values.
-*   Explore deploying the Streamlit application to a hosting platform to make it accessible to users.
-
-"""
